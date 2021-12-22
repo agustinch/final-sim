@@ -60,7 +60,7 @@ def Simulacion(seed, tiempo, stock_inicial, costo_docena, min_compra, max_compra
 
             # Calcula la cantidad vendida en base a la demanda y el stock remanente más las unidades compradas ese mes
 
-            # Unidades Disponible
+            # Unidades Disponible (Stock del mes anterior)
             unidades_disponibles = stock + compra_realizada_unidades
 
             cant_venta = calcularVentas(cant_demanda, unidades_disponibles)

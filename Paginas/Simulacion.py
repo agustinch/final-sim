@@ -33,13 +33,13 @@ def LoadPage():
     # Parametros de tiempo de compra de ticket
     st.header('Probabilidades (%) de la demanda')
     dem_250 = st.number_input('Probabilidad de tener una demanda de 250 unidades (%):', min_value=0, max_value=100, value=30)
-    dem_300 = st.number_input('Probabilidad de tener una demanda de 300 unidades (%):', min_value=0, max_value=100, value=10)
-    dem_350 = st.number_input('Probabilidad de tener una demanda de 350 unidades (%):', min_value=0, max_value=100, value=10)
-    dem_400 = st.number_input('Probabilidad de tener una demanda de 400 unidades (%):', min_value=0, max_value=100, value=10)
+    dem_300 = st.number_input('Probabilidad de tener una demanda de 300 unidades (%):', min_value=0, max_value=100, value=5)
+    dem_350 = st.number_input('Probabilidad de tener una demanda de 350 unidades (%):', min_value=0, max_value=100, value=20)
+    dem_400 = st.number_input('Probabilidad de tener una demanda de 400 unidades (%):', min_value=0, max_value=100, value=15)
     dem_450 = st.number_input('Probabilidad de tener una demanda de 450 unidades (%):', min_value=0, max_value=100, value=10)
     dem_500 = st.number_input('Probabilidad de tener una demanda de 500 unidades (%):', min_value=0, max_value=100, value=10)
-    dem_600 = st.number_input('Probabilidad de tener una demanda de 600 unidades (%):', min_value=0, max_value=100, value=10)
-    dem_700 = st.number_input('Probabilidad de tener una demanda de 700 unidades (%):', min_value=0, max_value=100, value=10)
+    dem_600 = st.number_input('Probabilidad de tener una demanda de 600 unidades (%):', min_value=0, max_value=100, value=5)
+    dem_700 = st.number_input('Probabilidad de tener una demanda de 700 unidades (%):', min_value=0, max_value=100, value=5)
 
 
     prob = [dem_250,dem_300,dem_350,dem_400,dem_450,dem_500,dem_600,dem_700]
