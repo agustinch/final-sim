@@ -27,7 +27,7 @@ def LoadPage():
     stock_inicial = 0
     ## stock_inicial = st.number_input('Stock inicial', min_value=0, value=0, format='%d')
     min_compra = st.number_input('Cantidad mínima de docenas de souvenirs que se pueden comprar por mes', min_value=0, value=30, format='%d')
-    max_compra = 40
+    max_compra = 50
     max_compra = st.number_input('Cantidad máxima de docenas de souvenirs que se pueden comprar por mes', min_value=min_compra, value= max_compra if min_compra < max_compra else min_compra + 20, format='%d' )
     
     # Parametros de tiempo de compra de ticket
