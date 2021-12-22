@@ -41,7 +41,7 @@ def Simulacion(seed, tiempo, stock_inicial, costo_docena, min_compra, max_compra
     valor_cuota = round(costo_inversion / total_cuotas_inversion,2)
     for i in range(tiempo + 1):
         if(i == 0):
-            it_datos = [i, 0, 0, 0, stock_inicial,0,0,0,0,0,0,0,0,0]
+            it_datos = [i, 0, 0, 0, stock,0,0,0,0,0,0,0,0,0]
         else:
             # Generar número aleatorio
             random_dem = truncate(random.random(), 4)

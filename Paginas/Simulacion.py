@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from Soporte.Controlador import Simulacion
-from Soporte.Utils import probabilidadesAcumuladas, convertirPorcentajesADecimales, crearIntervalos, generarExcel, validarProbabilidades
+from Soporte.Utils import probabilidadesAcumuladas, convertirPorcentajesADecimales, crearIntervalos, generarExcel, validarProbabilidades, valores_demanda
 import pandas as pd
 
 
@@ -12,6 +12,7 @@ def LoadPage():
     # Parametros de la simulacion y visualizacion
     st.header('Parámetros de la simulación.')
     seed = st.number_input('Semilla para la generación de los número random', min_value=0, value=0)
+
     tiempo = st.number_input('Tiempo a simular (meses)', min_value=0, value=12)
     mostrar_desde_mes = st.number_input('Mes desde el cual se muestran las iteraciones', min_value=0, value=1, max_value=tiempo)
     cant_it_mostrar = tiempo + 1 if mostrar_desde_mes == 0 else (tiempo + 1 - mostrar_desde_mes)
@@ -52,7 +53,7 @@ def LoadPage():
 
         prob_acum = probabilidadesAcumuladas(prob)
         prob_interv = crearIntervalos(prob)
-        prob_demanda_data = {'Demanda': [250,300,350,400,450,500,600,700],
+        prob_demanda_data = {'Demanda': valores_demanda,
                     'Probabilidad (%)':  prob,
                     'Probabilidad': convertirPorcentajesADecimales(prob),
                     'Probabilidad acumuladas':prob_acum[1:],
