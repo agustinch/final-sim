@@ -55,7 +55,7 @@ def validarProbabilidades(vector):
 
 def crearDataFrame(datos):
     
-    col = ["Reloj (meses)",
+    col = ["Tiempo (meses)",
         "RND Demanda",
         "Demanda",
         "Venta",
